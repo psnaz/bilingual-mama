@@ -1,0 +1,1 @@
+web: gunicorn bilingual-mama.wsgi
