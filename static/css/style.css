@@ -30,13 +30,12 @@ body {
 }
 
 .card {
-    border: none;
     background-color: transparent;
 }
 
-.image-container {
+/*.image-container {
     position: relative;
-}
+}*/
 
 .image-flash {
     position: absolute;
@@ -49,7 +48,6 @@ body {
 .author {
     color: white;
     margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
