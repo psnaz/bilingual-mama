@@ -2,6 +2,14 @@
 
 {% block content %}
 
+<section id="hero" class="d-flex justify-content-center align-item-center">
+    <div class="header container text-center my-5" id="header">
+        <h1 class="display-5">Welcome to Bilingual Mama's blog!</h1>
+        <p class="lead">So happy to have you here. Enjoy my hands-on bilingual parenting tips.</p>
+        <button class="btn btn-signup px-3">START HERE</button>
+    </div>
+</section>
+
 <div class="container-fluid">
     <div class="row">
 
@@ -28,7 +36,7 @@
                                 </p>
                                 <hr>
                                 <p class="card-text">{{ post.excerpt }}</p>
-                                <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read more</a>
+                                <a href="{% url 'post_detail' post.slug %}" class="btn btn-signup btn-sm">Read more</a>
                             </div>
                         </div>
                     </div>

@@ -9,8 +9,8 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+.purple-logo {
+    color: #b50c74;
 }
 
 .thin {
@@ -33,9 +33,12 @@ body {
     background-color: transparent;
 }
 
-/*.image-container {
-    position: relative;
-}*/
+
+#hero {
+    color:  #b50c74;
+    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669638096/bm_hero_lg_so8qkm.png) top center / cover no-repeat;
+    min-height: 450px;
+}
 
 .image-flash {
     position: absolute;
@@ -60,7 +63,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #b50c74;
     color: white;
     position: relative;
 }
@@ -77,7 +80,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background:  #b50c74;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -91,7 +94,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color:  #b50c74;
 }
 
 .post-title {
@@ -105,18 +108,18 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #b50c74;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #b50c74;
 }
 
 .link {
-    color: #23BBBB;
+    color:  #b50c74;
     text-decoration: none;
 }
 
@@ -127,14 +130,14 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #b50c74;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color:  #b50c74;
     background: transparent;
     border: none;
 }
