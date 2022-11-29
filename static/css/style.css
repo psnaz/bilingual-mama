@@ -140,8 +140,8 @@ body {
     border: none;
 }
 
-/* Query form fields required */
-
-.required label:after {
-    content: "*";
+@media(max-width: 320px) {
+    .navbar-toggler {
+        font-size: 95%;
+    }
 }
