@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+"""
+This is my original custom model with associated functionalities that 
+hasn't been used in the CI Django Walkthrough projects. It has been 
+created by following the Youtube Django Tutorial #9: A More Complex Form (2022) 
+by Django tutorials (see README file)
+"""
+
 STATUS_CHOICES = (
     ('PARENT', 'I am a parent'),
     ('EXPECTING', 'I am or we are expecting a baby'),
@@ -17,7 +24,6 @@ class Query(models.Model):
     message = models.TextField()
     submitted = models.DateField(auto_now_add=True)
     answerdate = models.DateField(blank=True, null=True)
-    username = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.id)
