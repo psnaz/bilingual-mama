@@ -1,10 +1,22 @@
+<!--This is my original custom model with associated functionalities that 
+hasn't been used in the CI Django Walkthrough projects. It has been 
+created by following and tweaking the Youtube Django Tutorial #9: 
+A More Complex Form (2022) by Django tutorials (see README file) 
+AND with a kind advice and help of my mentor. -->
+
 {% extends "base.html" %}
 
 {% block title %}Contact Me{% endblock title%}
 
 {% block content %}
 
-<h1>Contact Me</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+        <h3>Contact Me</h3>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
@@ -12,30 +24,30 @@
       <form class="query_form" id="query_form" method="post" action="{% url 'query_form' %}">
         {% csrf_token %}
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name"></label>
             <input type="name" class="form-control" name="name" id="name" placeholder="Name" required>
           </div>
           <div class="form-group">
-            <label for="surname">Surname</label>
+            <label for="surname"></label>
             <input type="name" class="form-control" name="surname" id="surname" placeholder="Surname" required>
           </div>
           <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+            <label for="email"></label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your email: name@example.com" required>
           </div>
           <div class="form-group">
-            <label for="status">Example select</label>
+            <label for="status">Who are you?</label>
             {{query_form.status}}
           </div>
           <div class="form-group">
-              <label for="subject">Subject</label>
-              <textarea class="form-control" name="subject" id="subject" rows="1" required></textarea>
+              <label for="subject"></label>
+              <textarea class="form-control" name="subject" id="subject" rows="1" placeholder="Subject" required></textarea>
           </div>
           <div class="form-group">
-            <label for="message">Example textarea</label>
-            <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+            <label for="message"></label>
+            <textarea class="form-control" name="message" id="message" rows="3" placeholder="How can I help you?" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-signup mt-3">Submit</button>
         </form>
     </div>
   </div>
