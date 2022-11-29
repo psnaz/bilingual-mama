@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -65,6 +65,7 @@ class PostDetail(View):
             },
         )
 
+
 class PostLike(View):
 
     def post(self, request, slug):
@@ -76,3 +77,7 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def about(request): 
+    return render(request, 'about.html')
