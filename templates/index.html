@@ -20,10 +20,10 @@
                     <div class="card mb-4">
                         <div class="image-container">
                             {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-image-top img-fluid"
+                            <img class="card-image-top img-fluid" alt="No image available"
                                 src="https://res.cloudinary.com/dddl5dzey/image/upload/v1669371699/Bilingual_Mama_blog/klucisjazykama_sipgte.png">
                             {% else %}
-                            <img class="card-image-top img-fluid" src=" {{ post.featured_image.url }} ">
+                            <img class="card-image-top img-fluid" alt="{{ post.title }}" src=" {{ post.featured_image.url }} ">
                             {% endif %}
                         </div>
                         <div class="card-body">

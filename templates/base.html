@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Bilingual Mama is a blog about raising bilingual children">
     <meta name="keywords" content="bilingual mama, bilingual mum, bilingual child, bilingual children, bilingual kids, bilingual baby, bilingual family">
     <meta name="author" content="Petra Snazle">
@@ -31,8 +31,14 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}"><h1 class="logo"><span class="brand"><span class="purple-logo">Bilingual</span>
-                <span class="thin">MAMA</span></span></span></h1></a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <h1 class="logo">
+                    <span class="brand">
+                        <span class="purple-logo">Bilingual</span>
+                        <span class="thin">MAMA</span>
+                    </span>
+                </h1>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,21 +46,21 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a {% if 'home' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %} aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a {% if 'about' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'queries' %}">Contact</a>
+                        <a {% if 'queries' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'queries' %}">Contact</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a {% if 'account_logout' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a {% if 'signup' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-dark px-2" href="{% url 'account_login' %}">Login</a>
