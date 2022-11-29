@@ -35,22 +35,15 @@ body {
 
 
 #hero {
-    color:  #b50c74;
-    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669638096/bm_hero_lg_so8qkm.png) top center / cover no-repeat;
+    background-color: #b50c74;
+    color:  white;
+    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669753103/bm_1300_grey_kintme.png) top center / cover no-repeat;
     min-height: 450px;
 }
 
 #about {
     background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669729582/20170129_125115_1_u8q070.jpg) top center / cover no-repeat;
     min-height: 450px;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
 }
 
 .author {
