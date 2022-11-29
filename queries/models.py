@@ -15,6 +15,7 @@ STATUS_CHOICES = (
     ('OTHER', 'I am just someone who wants to get in touch'),
 )
 
+
 class Query(models.Model):
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
@@ -24,7 +25,8 @@ class Query(models.Model):
     message = models.TextField()
     submitted = models.DateField(auto_now_add=True)
     answerdate = models.DateField(blank=True, null=True)
-    username = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
+    username = models.ForeignKey(
+        User, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.id)
