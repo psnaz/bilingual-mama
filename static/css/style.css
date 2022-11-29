@@ -40,6 +40,11 @@ body {
     min-height: 450px;
 }
 
+#about {
+    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669729582/20170129_125115_1_u8q070.jpg) top center / cover no-repeat;
+    min-height: 450px;
+}
+
 .image-flash {
     position: absolute;
     bottom: 5%;
