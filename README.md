@@ -1,3 +1,54 @@
+# BILINGUAL MAMA
+
+
+This is my 4th project for my Diploma in Software Dev Course and it’s been built for educational purposes only. 
+
+The purpose of the website is to inspire bilingual mums (and dads!) to raise fully bilingual and multicultural children that are used to “live and learn” in two languages simultaneously. 
+
+This website is designed to be responsive and accessible on a range of devices, making it easy to navigate for the audience.
+
+
+## Showcase
+
+A deployed link to the website can be found [here] (https://bilingual-mama.herokuapp.com/)
+
+
+## Features
+
+Bilingual Mama is a personal blog that includes several pages: Home/ Blog, About, Contact, Register and  Login.
+
+### Navigation Bar
+
+The responsive navigation bar includes links to Home page/Blog, About, Contact, Register and Login. Once a registered user loggs in the login link is replaces a Logout link in the navbar.
+This section is linked to other relevant sections of this blog which allows the user to navigate through the page easily.
+
+
+### The landing Page Image
+
+The landing page includes an outdoor family photograph of the blogger with her children.
+
+
+### About Section
+
+This section tells an authentic personal story and creates connection with a reader that is being introduced to hands-on bilingual parenting practices that have been tried out by the blogger and other multilingual parents to teach their children their native (minority) language. 
+As this is a blog the main focus is the content shared rather than the images, however, the images are used to entice readers and create know-like-trust factor.
+
+### Contact page
+
+### Register
+
+### Login
+
+### Logout
+ 
+
+
+## User Experience (UX)
+
+### User Stories
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome psnaz,
