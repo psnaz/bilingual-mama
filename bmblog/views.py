@@ -78,6 +78,15 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+# My own code
 
-def about(request): 
+def about(request):
     return render(request, 'about.html')
+
+
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
+
+
+def internal_server_error_view(request):
+    return render(request, '500.html', status=500)

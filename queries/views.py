@@ -27,8 +27,6 @@ def index(request):
 
 def query_form(request):
     form = QueryForm(request.POST)
-    # https://docs.python.org/3/library/pdb.html
-    # import pdb;pdb.set_trace()
     if form.is_valid():
         form.save()
         return redirect('query_submitted')

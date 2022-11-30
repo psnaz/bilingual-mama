@@ -9,3 +9,6 @@ urlpatterns = [
     path('queries', include('queries.urls')),
     path('templates/about/', views.about, name='about'),
 ]
+
+handler404 = "bmblog.views.page_not_found_view"
+handler500 = "bmblog.views.internal_server_error_view"
