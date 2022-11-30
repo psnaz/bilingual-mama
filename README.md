@@ -7,6 +7,7 @@ The purpose of the website is to inspire bilingual mums (and dads!) to raise ful
 
 This website is designed to be responsive and accessible on a range of devices, making it easy to navigate for the audience.
 
+![bm-mockup.png](./docs/images/bm-mockup.png)
 
 ## Showcase
 
