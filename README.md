@@ -11,7 +11,7 @@ This website is designed to be responsive and accessible on a range of devices, 
 
 ## Showcase
 
-A deployed link to the website can be found [here] (https://bilingual-mama.herokuapp.com/)
+A deployed link to the website can be found [here.](https://bilingual-mama.herokuapp.com/)
 
 
 ## Features
@@ -46,8 +46,87 @@ As this is a blog the main focus is the content shared rather than the images, h
 
 ## User Experience (UX)
 
-### User Stories
+### Strategy
 
+#### **User Stories**
+
+The target audience (end users) of this project are bilingual females (but also males) from the age of 25+ who live abroad and are looking for hands-on information about raising bilingual children in an environment where the minority (their own) language is not spoken readily. It is aimed at this type of audience as my personal story (“bilingual mum of two trying to bring up her children bilingual so that they can understand and speak her language as natives”) can resonate with them.
+
+The end user is looking for inspiration and hands-on advice and how-tos, not scientific theories.
+
+The benefit of this project is to highlight that bilingual parenting can be a very tricky and time-consuming task however, if you have a sound ‘strategy and you persist, you will “bear the fruit of your labour” eventually, as long as you’re patient and consistent.
+
+Other features that are not to be missed is that the users can, if they wish, get in touch to obtain more parenting advice by sending a contact form and also asking questions when commenting on the relevant blog posts. They can also easily navigate to the social links.
+
+#### **Site user/ Blog reader Goals**
+- As a site user/blog reader I can view a paginated list of posts so that I can easily select a post to view
+- As a Site User/blog reader I can view a list of posts so that I can select one to read
+- As a Site User/blog reader I can click on a post so that I can read the full text
+- As a Site User/ Blog reader I can register an account so that I can comment and like
+- As a Site User/ Blog reader I can leave comments on a post so that I can be involved in the conversation
+- As a Site User/ Blog reader I can like or unlike a post so that I can interact with the content
+- As a Site User/ Blog reader I can navigate easily through the website so that I can find the information I am looking for
+- As a Site User / Blog reader I can view the About page so that I can find out more about the blogger and the purpose of her blog
+- As a Site User/ Blog reader I can get in touch with the blogger so that I can submit my questions to her
+- As a Site User/ Blog reader I can check the blogger’s social media accounts so that I can be a part of her community and get updates on her content
+
+#### **Site owner/ Blogger / Admin Goals**
+- As a Site Owner/ Blogger / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
+- As a Site Owner/ Blogger / Admin I can view comments on an individual post so that I can read the conversation
+- As a Site Owner/ Blogger / AdminI can create, read, update and delete posts so that I can manage my blog content
+- As a Site Owner/ Blogger / AdminI can create draft posts so that I can finish writing the content later
+- As a Site Owner/ Blogger / AdminI can approve or disapprove comments so that I can filter out objectionable comments
+
+### Scope
+
+To achieve the above goals I have implemented the following features:
+
+
+## Technologies Used
+
+### Languages Used
+- HTML5, Boostrap framework
+- CSS3
+- JavaScript
+- Python, Django library
+- SQLLite/Postgress
+
+### Frameworks, Libraries and Programs Used
+
+- Canva.com: Canva Color Palette Generator was used to create a color palette and Canva was used to create a mock-up design, and for resizing and editing images.
+- Git: Git was used for version control by utilizing the Gitpod terminal - to commit to Git and push to GitHub
+- GitHub: Github is used to store the project's code after being pushed from Git.
+- GoogleDev Tools used to see the element positioning and responsiveness
+- [Google Fonts](https://fonts.google.com/): Google fonts ‘Lato’ and 'Roboto' were used. 
+- favicon.io was used to create the favicon
+- FontAwesome used for social media icons: FB, IG, YT
+- Coudinary: for storing images
+- [amiresponsive](http://ami.responsivedesign.is/) was used to create the mockup for Readme
+
+
+## Credits
+
+### Code
+
+- The majority of the code came from the Django Walkthrough project and the Diploma in Software Development study materials, my notes taken during going through the materials and by working with Google DevTools - trial and error approach.
+
+- [MDN Web Docs](https://developer.mozilla.org/en-US/): Used extensively to deepen my knowledge and understanding of HTML and CSS, and chek for ideas and solutions, specifically:  
+
+- For Contact form/ Query model: Youtube [Django Tutorial #9: A More Complex Form (2022) by Django tutorials](https://www.youtube.com/watch?v=-qAf_Qx6Ygg)
+
+- [Djangoproject documentation](https://docs.djangoproject.com/en/4.1/)
+
+- Stackoverflow
+
+- For 404 and 500 Error pages [this youtube tutorial](https://www.youtube.com/watch?v=zSEexM0GspU) and [this article](https://freefrontend.com/html-funny-404-pages/)
+
+-  Mentor’s advice, especially when creating the template and urls for the Query model to render correctly.
+
+
+
+
+
+======== ALL BELOW TO BE DELETED!!!! ======
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
