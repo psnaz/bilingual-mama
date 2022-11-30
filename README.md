@@ -14,36 +14,6 @@ This website is designed to be responsive and accessible on a range of devices, 
 A deployed link to the website can be found [here.](https://bilingual-mama.herokuapp.com/)
 
 
-## Features
-
-Bilingual Mama is a personal blog that includes several pages: Home/ Blog, About, Contact, Register and  Login.
-
-### Navigation Bar
-
-The responsive navigation bar includes links to Home page/Blog, About, Contact, Register and Login. Once a registered user loggs in the login link is replaces a Logout link in the navbar.
-This section is linked to other relevant sections of this blog which allows the user to navigate through the page easily.
-
-
-### The landing Page Image
-
-The landing page includes an outdoor family photograph of the blogger with her children.
-
-
-### About Section
-
-This section tells an authentic personal story and creates connection with a reader that is being introduced to hands-on bilingual parenting practices that have been tried out by the blogger and other multilingual parents to teach their children their native (minority) language. 
-As this is a blog the main focus is the content shared rather than the images, however, the images are used to entice readers and create know-like-trust factor.
-
-### Contact page
-
-### Register
-
-### Login
-
-### Logout
- 
-
-
 ## User Experience (UX)
 
 ### Strategy
@@ -77,9 +47,100 @@ Other features that are not to be missed is that the users can, if they wish, ge
 - As a Site Owner/ Blogger / AdminI can create draft posts so that I can finish writing the content later
 - As a Site Owner/ Blogger / AdminI can approve or disapprove comments so that I can filter out objectionable comments
 
-### Scope
+## Scope
 
 To achieve the above goals I have implemented the following features:
+
+## Features
+
+Bilingual Mama is a personal blog that includes several pages: Home/ Blog, About, Contact, Register and  Login.
+
+### Navigation Bar
+
+The responsive navigation bar includes links to Home page/Blog, About, Contact, Register and Login. Once a registered user loggs in the login link is replaces a Logout link in the navbar.
+This section is linked to other relevant sections of this blog which allows the user to navigate through the page easily.
+
+
+### The landing Page Image
+
+The landing page includes an outdoor family photograph of the blogger with her children.
+
+
+### About Section
+
+This section tells an authentic personal story and creates connection with a reader that is being introduced to hands-on bilingual parenting practices that have been tried out by the blogger and other multilingual parents to teach their children their native (minority) language. 
+As this is a blog the main focus is the content shared rather than the images, however, the images are used to entice readers and create know-like-trust factor.
+
+### Contact page
+
+This page contains a contact form that includes contact details fields, status field to find out more about the user, subject line, text area for the message and submit button.
+
+### Registration page
+
+This page enables the blog user to register in order to comment and like or unlike blog posts. It contains a form that includes Username and an optional email fields, password and password confirmation field, and a sign-up button.
+
+### Login
+
+This page enables the blog user to log in in order to comment and like or unlike blog posts.This page contains a form that includes Username and  password and password fields, remember-me checkbox and a sign-in button.
+
+### Logout
+
+This page the user to log out and contains a sign-out button. 
+
+## Other Features
+
+### Blog post overview
+
+Blog overview section that lists up to 6 blog posts on the page the user is currently on. Each individual blog post view containing an image, tagline, author's name, date when published and a snippet of the blog post.
+
+### Pagination
+
+At the bottom of the blog overview there's a pagination directing the user to go to the next or previous page.
+
+### Footer
+
+A footer is located right at the bottom of the page and contains social media links.
+
+### Individual blog post view
+
+Each individual blog post includes the content, but also a header, and below the section to comment and like/unlike provided they are registered and logged in.
+
+### Error pages
+
+Error pages (404 and 500) are available to the user provided something goes wrong, eg. they are trying to look for link or content that does not exist.
+
+### CRUD Functionality
+
+Full CRUD funtionality is available to the admin/ blogger/ site owner to be able to draft, save, publish, update and delete posts.
+
+### Query form 
+Submitted contact form information is available to the admin/blogger in the admin panel under Queries.
+
+
+## Design
+
+Originally, I have created a colour palette with canva that was based on my hero image in full colour, however, I was not happy with the colours and have changed them as I was designing. Instead of the original colour palette colours the following colours have been used: #b50c74, #fff, #4a4a4a and #0275d8.
+
+## Typography
+
+Typography was based on the Django blog Walktrough project.
+
+## Wireframes
+
+Wireframes were created using Canva. 
+
+## Database
+
+I have used a relational database for this project. SQLite/Postgress was used as the main database, all data migrated to Heroku and then due to the recent Heroku changes it was successfully migrated to ElephantSQL.
+
+I have created a separate Queries app and inclueded my custom model:
+
+- contact: contains information about the user
+- status: contains additional information (eg parental status, blogger status)
+- subject: contains subject line
+- message: contains user's message
+- answerdate: could be added in admin when messages answered
+- user: contains information about the user
 
 
 ## Technologies Used
@@ -102,13 +163,34 @@ To achieve the above goals I have implemented the following features:
 - FontAwesome used for social media icons: FB, IG, YT
 - Coudinary: for storing images
 - [amiresponsive](http://ami.responsivedesign.is/) was used to create the mockup for Readme
+- Validation services: W3C Markup Validation, W3C CSS Validation, PEP8 Validation
 
+## TESTING
+
+I have tested this project manually and completed also some auto testing via the online validation services.
+
+## DEPLOYMENT
+
+This site was deployed to GitHub pages by taking the following steps:
+
+1. In the GitHub repository click on the settings tab on the right hand site
+2. Scroll down to the GitHub pages heading that informs you that 'Pages setting now has its own tab' and click on the link next to it.
+3. Select source and select 'main' and save, this will refresh the page.
+4.  Scroll down to the GitHub Pages section again to see the deployed link and click on it.
+5. Please note that it might take a few minutes for Github to build the site.
+
+
+## Forking the GitHub Repository OR Making a Local Clone
+
+If you are interested how to fork this repository or how to make a local clone, this information can be found in Github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ## Credits
 
 ### Code
 
 - The majority of the code came from the Django Walkthrough project and the Diploma in Software Development study materials, my notes taken during going through the materials and by working with Google DevTools - trial and error approach.
+
+- Additonal knowledge used from the following courses: [The Boostrap 4 Camp](https://www.udemy.com/course/bootstrap-4-bootcamp/)
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/): Used extensively to deepen my knowledge and understanding of HTML and CSS, and chek for ideas and solutions, specifically:  
 
@@ -122,118 +204,3 @@ To achieve the above goals I have implemented the following features:
 
 -  Mentor’s advice, especially when creating the template and urls for the Query model to render correctly.
 
-
-
-
-
-======== ALL BELOW TO BE DELETED!!!! ======
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome psnaz,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
