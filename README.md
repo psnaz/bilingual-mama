@@ -171,13 +171,21 @@ I have tested this project manually and completed also some auto testing via the
 
 ## DEPLOYMENT
 
-This site was deployed to GitHub pages by taking the following steps:
+### Deployment to Heroku
 
-1. In the GitHub repository click on the settings tab on the right hand site
-2. Scroll down to the GitHub pages heading that informs you that 'Pages setting now has its own tab' and click on the link next to it.
-3. Select source and select 'main' and save, this will refresh the page.
-4.  Scroll down to the GitHub Pages section again to see the deployed link and click on it.
-5. Please note that it might take a few minutes for Github to build the site.
+This site was deployed to Heroku pages by taking the following steps:
+
+1. Log into your Heroku account
+2. On your right hand side, click on the button ‘New’ and then click ‘create a new app’
+3. Name your app and chose a region, then click ‘Create app’ button below
+4. Click on the Settings in the tab
+5. Click add Buildpack to add 2 buildpack as follows: first `heroku/python` and then `heroku/nodejs`, save changes
+6. You must then create a Config var (click reveal Config Vars under the Settings, just above the Buildpack) called `PORT` (under key) and set it to `8000` (under value) and click add, then hide Config Vars
+7. Click Deploy on the tab and chose deployment method: connect to your GitHub repository
+8. Search for your repository, once found, connect.
+9. Scroll down to Manual deploy and click ‘Deploy branch’. Your app will be built.
+10. Once you ‘App was successfully deployed’ message and button with your deployed link, you can click on it to see your app.
+
 
 
 ## Forking the GitHub Repository OR Making a Local Clone
