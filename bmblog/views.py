@@ -80,6 +80,17 @@ class PostLike(View):
 
 # My own code
 
+def edit_comment(request):
+    form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form is_valid():
+            form.save()
+            return redirect('edit-comment')
+        
+        return render(request, 'edit-comment.html')
+
+
 def about(request):
     return render(request, 'about.html')
 

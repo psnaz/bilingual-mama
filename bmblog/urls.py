@@ -8,6 +8,7 @@ urlpatterns = [
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('queries', include('queries.urls')),
     path('templates/about/', views.about, name='about'),
+    path('edit-comment', views.edit_comment, name='edit-comment'),
 ]
 
 handler404 = "bmblog.views.page_not_found_view"
