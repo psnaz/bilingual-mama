@@ -82,6 +82,21 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
+                <!--My Code-->
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <h4>To like a post or leave a comment, please <a href="{% url 'account_signup' %}">register here.</a></h4>
+                <p>Already have an account? Please <a href="{% url 'account_login' %}">login here.</a></p>
+                {% endif %}
+
+                <!--Original Walkthrough-->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
