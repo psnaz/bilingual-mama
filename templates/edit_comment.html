@@ -4,11 +4,10 @@
 {% load crispy_forms_tags %}
 
 <div class="container pt-5">
-    <h3>This is where we edit a comment.</h3>
-
+    <br>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3">
-            <h4>Review your comment on {{ comment.post.title }}</h4>
+            <h4>You are reviewing your comment on {{ post.title }}</h4>
             <form method="POST" autocomplete="off" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ comment_form | crispy }}

@@ -29,7 +29,6 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -65,31 +64,35 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3">
-            <h3>Comments:</h3>
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3 class="mt-3 ml-5">Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
+                        <span class="text-muted font-weight-normal">
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
                 <hr>
-                <div>
-                    <h4><a href="{% url 'edit-comment' comment.id %}">EDIT</a>Your Comment</h4>
-                    <h4>DELETE Your Comment</h4>
-                </div>
-                <hr>
-                <br>                
+                    {% if user == comment.comment_author %}
+                    <div>
+                        <h4><a href="{% url 'edit-comment' comment.id %}">EDIT</a>Your Comment</h4>
+                        <h4>DELETE Your Comment</h4>
+                    </div>
+                    <hr>
+                    <br>
+                    {% else %}
+                    <div><h4>You can only edit and delete your own comments.</h4></div>
+                {% endif %}                
                 {% endfor %}
 
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 <!--My Code -->
                 {% if user.is_authenticated %}
