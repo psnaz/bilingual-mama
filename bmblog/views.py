@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from django.contrib.auth.decorators import login_required
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -80,15 +81,24 @@ class PostLike(View):
 
 # My own code
 
-def edit_comment(request):
-    form = CommentForm()
+@login_required
+def edit_comment(request, pk):
+    comment = get_object_or_404(Comment, id=pk)
+    comment_form = CommentForm(instance=comment)
     if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form is_valid():
-            form.save()
-            return redirect('edit-comment')
+        comment_form = CommentForm(request.POST, instance=comment)
+        if comment_form.is_valid():
+            comment_form.save()
+            return redirect('post_detail', comment.post.slug)
         
-        return render(request, 'edit-comment.html')
+    return render(
+        request,
+        "edit_comment.html",
+        {
+            "comment_form": comment_form,
+        },
+    )
+
 
 
 def about(request):

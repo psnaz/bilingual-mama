@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4  mt-3">
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
@@ -77,16 +77,16 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
-                </div>                
-                {% endfor %}
-
-                <br>
+                </div>
                 <hr>
                 <div>
-                    <h4>EDIT Your Comment</h4>
+                    <h4><a href="{% url 'edit-comment' comment.id %}">EDIT</a>Your Comment</h4>
                     <h4>DELETE Your Comment</h4>
                 </div>
-                
+                <hr>
+                <br>                
+                {% endfor %}
+
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
