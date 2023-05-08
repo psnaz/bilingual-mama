@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container pt-5">
+    <br>
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3">
+            <h4>You are reviewing your comment on {{ post.title }}</h4>
+            <form method="POST" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ comment_form | crispy }}
+                <p>Are you sure that you want to delete your comment?</p>
+                <button type="submit" class="btn btn-danger btn-sm">Delete Your Comment</button>
+                <a href="{% url 'home' %}" class="btn btn-outline-primary btn-sm mt-2" role="button">Go back to the blog</a>
+            </form>
+        </div>    
+    </div>
+
+</div>
+
+{% endblock %}

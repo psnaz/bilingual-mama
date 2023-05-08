@@ -83,7 +83,7 @@
                         {% if user == comment.comment_author %}
                         <div class="border">
                             <a href="{% url 'edit-comment' comment.id %}" class="btn btn-primary btn-sm mt-2" role="button">Edit your comment</a>
-                            <a href="" class="btn btn-outline-danger btn-sm mt-2" role="button">Delete your comment</a>
+                            <a href="{% url 'delete-comment' comment.id %}" class="btn btn-outline-danger btn-sm mt-2" role="button">Delete your comment</a>
                         </div>
                         <br>
                         {% else %}
@@ -91,6 +91,8 @@
                             <br>
                         </div>
                     {% endif %}
+
+
                     <br>    
                 {% endif %}                
                 {% endfor %}
@@ -109,6 +111,8 @@
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
+
+
                 <h4>To like a post or leave a comment, please <a href="{% url 'account_signup' %}">register here.</a></h4>
                 <p>Already have an account? Please <a href="{% url 'account_login' %}">login here.</a></p>
                 {% endif %}
@@ -120,7 +124,6 @@
                 </div>
                 {% endif %}
                  
-
             </div>
         </div>
     </div>

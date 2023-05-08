@@ -16,6 +16,9 @@ class PostList(generic.ListView):
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
+        """
+        Renders a single blog post page
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
@@ -36,6 +39,9 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Enables to leave a comment
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
@@ -69,7 +75,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
+    """
+    Enables to like a blog post
+    """
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 
@@ -84,6 +92,9 @@ class PostLike(View):
 
 @login_required
 def edit_comment(request, pk):
+    """
+    Enables to edit the approved comment
+    """
     comment = get_object_or_404(Comment, id=pk)
     comment_form = CommentForm(instance=comment)
     if request.method == 'POST':
@@ -99,6 +110,18 @@ def edit_comment(request, pk):
             "comment_form": comment_form,
         },
     )
+
+@login_required
+def delete_comment(request, pk):
+    """
+    Enables to delete the approved comment
+    """
+    comment = get_object_or_404(Comment, id=pk)
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('post_detail', comment.post.slug)
+        
+    return render(request, "delete_comment.html")
 
 
 
