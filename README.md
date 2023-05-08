@@ -133,6 +133,8 @@ Wireframes were created using Canva.
 
 I have used a relational database for this project. SQLite/Postgress was used as the main database, all data migrated to Heroku and then due to the recent Heroku changes it was successfully migrated to ElephantSQL.
 
+![database-modeling.png](./docs/images/database-modeling.png)
+
 I have created a separate Queries app and inclueded my custom model:
 
 - contact: contains information about the user
