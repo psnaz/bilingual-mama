@@ -3,6 +3,9 @@
 
 {% load crispy_forms_tags %}
 
+<!-- My own code -->
+<!-- Delete comment page -->
+
 <div class="container pt-5">
     <br>
     <div class="row">
@@ -14,15 +17,7 @@
                 <p>Are you sure that you want to delete your comment?</p>
                 <button type="submit" class="btn btn-danger btn-sm">Delete Your Comment</button>
                 <a href="{% url 'home' %}" class="btn btn-outline-primary btn-sm mt-2" role="button">Go back to the blog</a>
-            </form>
-
-            {% if deleted %}
-            <!--Code from Boostrap doc-->
-            <div class="alert alert-success" role="alert">
-                <strong>Success!</strong> Your comment has deleted.
-            </div>
-            {% endif %}
-            
+            </form>            
         </div>    
     </div>
 

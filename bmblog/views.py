@@ -90,6 +90,7 @@ class PostLike(View):
 
 # My own code
 
+
 @login_required
 def edit_comment(request, pk):
     """
@@ -121,14 +122,13 @@ def delete_comment(request, pk):
     if request.method == 'POST':
         comment.delete()
         return redirect('post_detail', comment.post.slug)
-    
+           
     context = {
         'post_title': comment.post.title,
         'comment_form': comment_form,
     }
 
     return render(request, "delete_comment.html", context)
-
 
 
 def about(request):
