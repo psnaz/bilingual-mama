@@ -102,14 +102,14 @@ def edit_comment(request, pk):
         if comment_form.is_valid():
             comment_form.save()
             return redirect('post_detail', comment.post.slug)
-        
-    return render(
-        request,
-        "edit_comment.html",
-        {
-            "comment_form": comment_form,
-        },
-    )
+
+    context = {
+        'post_title': comment.post.title,
+        'comment_form': comment_form,
+    }
+
+    return render(request, "edit_comment.html", context)
+
 
 @login_required
 def delete_comment(request, pk):
@@ -117,11 +117,17 @@ def delete_comment(request, pk):
     Enables to delete the approved comment
     """
     comment = get_object_or_404(Comment, id=pk)
+    comment_form = CommentForm(instance=comment)
     if request.method == 'POST':
         comment.delete()
         return redirect('post_detail', comment.post.slug)
-        
-    return render(request, "delete_comment.html")
+    
+    context = {
+        'post_title': comment.post.title,
+        'comment_form': comment_form,
+    }
+
+    return render(request, "delete_comment.html", context)
 
 
 

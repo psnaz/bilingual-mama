@@ -7,12 +7,21 @@
     <br>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3">
-            <h4>You are reviewing your comment on {{ post.title }}</h4>
+            <h4>You are reviewing your comment on <span class="text-muted">{{ post_title }}</span></h4>
             <form method="POST" autocomplete="off" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ comment_form | crispy }}
                 <button type="submit" class="btn btn-primary btn-sm">Edit Your Comment</button>
+                <a href="{% url 'home' %}" class="btn btn-outline-primary btn-sm mt-2" role="button">Go back to the blog</a>
             </form>
+
+            {% if edited %}
+            <!--Code from Boostrap doc-->
+            <div class="alert alert-success" role="alert">
+                <strong>Success!</strong> Your comment has updated.
+            </div>
+            {% endif %}
+            
         </div>    
     </div>
 
