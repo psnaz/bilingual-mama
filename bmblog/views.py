@@ -60,6 +60,7 @@ class PostDetail(View):
             comment_form.instance.name = request.user.username
             comment_form.instance.comment_author = request.user
             comment = comment_form.save(commit=False)
+            messages.success(request, "Your comment's been submitted.") #Thu
             comment.post = post
             comment.save()
         else:
