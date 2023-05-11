@@ -71,7 +71,7 @@
         </div>
     </nav>
 
-    <!--Added on Thu 11th MP5-->
+    <!-- Code from Boutique Ado Walkthrough enabling toast functionality -->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -87,7 +87,7 @@
         {% endblock content %}
     </main>
 
-    <!--FOR LOADING MESSAGES - 11th May!!!!!!--> 
+    <!--My own code for enabling the toast functionality --> 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toastElList = [].slice.call(document.querySelectorAll('.toast')) 
