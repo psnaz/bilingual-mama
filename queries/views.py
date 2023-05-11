@@ -31,7 +31,7 @@ def query_form(request):
         form.save()
         return redirect('query_submitted')
 
-    return HttpResponse('Something wrong happened')
+    return HttpResponse('Something went wrong')
 
 
 def query_submitted(request):

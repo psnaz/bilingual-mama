@@ -5,6 +5,10 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm
 
+from django.contrib import messages
+
+# Code from CI Django Blog Walkthrough project
+
 
 class PostList(generic.ListView):
     model = Post
@@ -88,6 +92,7 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 # My own code
 
 
@@ -102,6 +107,7 @@ def edit_comment(request, pk):
         comment_form = CommentForm(request.POST, instance=comment)
         if comment_form.is_valid():
             comment_form.save()
+            messages.success(request, "Your comment has been updated!")
             return redirect('post_detail', comment.post.slug)
 
     context = {
@@ -121,6 +127,7 @@ def delete_comment(request, pk):
     comment_form = CommentForm(instance=comment)
     if request.method == 'POST':
         comment.delete()
+        messages.success(request, "Your comment has been deleted!")
         return redirect('post_detail', comment.post.slug)
            
     context = {

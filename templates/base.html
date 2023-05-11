@@ -14,11 +14,11 @@
     <meta name="description" content="Bilingual Mama is a blog about raising bilingual children">
     <meta name="keywords" content="bilingual mama, bilingual mum, bilingual child, bilingual children, bilingual kids, bilingual baby, bilingual family">
     <meta name="author" content="Petra Snazle">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+    <!--Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!--Favicon-->
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon.png' %}">
     <!--Stylesheet-->
@@ -71,24 +71,33 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                <div class="alert {{ messages.tags }} alert-dismissable fade show" id="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dis="alert" aria-label="Close"></button>
-                </div>
-                {% endfor %}
-            </div>
+    <!--Added on Thu 11th MP5-->
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% endfor %}
         </div>
-    </div>
+    {% endif %}
+
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
+
+    <!--FOR LOADING MESSAGES - 11th May!!!!!!--> 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toastElList = [].slice.call(document.querySelectorAll('.toast')) 
+            toastElList.map(function (toastEl) {
+                const toast = new bootstrap.Toast(toastEl);
+                toast.show();
+                }
+            )
+        })
+    </script>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
@@ -99,13 +108,7 @@
         </p>
         <p class="m-0 text-center text-white"><small class="text-muted">Made with <i class="far fa-heart"></i> by Bilingual Mama <span>&copy; 2022</span></small></p>
     </footer>
-    <script>
-        setTimeout(function() {
-            let messages = document.getElementById("msg");
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 3000);
-    </script>
+
 </body>
 
 </html>
