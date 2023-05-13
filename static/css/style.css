@@ -36,12 +36,12 @@ body {
 #hero {
     background-color: #b50c74;
     color:  white;
-    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669753103/bm_1300_grey_kintme.png) top center / cover no-repeat;
+    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1683987974/bm-grey-me_ngv5hs.webp) top center / cover no-repeat;
     min-height: 450px;
 }
 
 #about {
-    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1669729582/20170129_125115_1_u8q070.jpg) top center / cover no-repeat;
+    background: url(https://res.cloudinary.com/dddl5dzey/image/upload/v1683987995/bm-wall-70_tft7zn.webp) top center / cover no-repeat;
     min-height: 450px;
 }
 
