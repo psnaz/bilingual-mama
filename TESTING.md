@@ -4,12 +4,12 @@
 The below online validation tools were used to validate the project pages to ensure that there were no syntax errors in the project.
 
 ### HTML Validator
-See the screenshot below for HTML code test results run with [HTML Validator.](https://validator.w3.org/)
+See the screenshot below for HTML code test results run with [HTML Validator.](https://validator.w3.org/) No errors detected.
 
 ![html-testing.png](./docs/images/html-testing.png)
 
 ### CSS Validator
-See the screenshot below for CSS code test results run with [CSS Validator.](https://jigsaw.w3.org/css-validator/)
+See the screenshot below for CSS code test results run with [CSS Validator.](https://jigsaw.w3.org/css-validator/) No errors detected.
 
 ![css-testing.png](./docs/images/css-testing.png)
 
@@ -26,9 +26,9 @@ See the screenshot below for Python code test results run with [Python Validator
 
 ## Lighthouse Test
 
-See the screenshot below for HTML code test results run with [HTML Validator.](https://validator.w3.org/)
+See the screenshot below for the Lighthouse test results run with [Lighthouse Chrome Extension.](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) When tested for Performance, Accessibility, Best Practices and SEO, good results were achieved.
 
-![html-testing.png](./docs/images/html-testing.png)
+![lighthouse-testing.png](./docs/images/lighthouse-testing.png)
 
 ## Responsiveness Test
 

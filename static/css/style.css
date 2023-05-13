@@ -147,7 +147,7 @@ body {
 }
 
 .custom-toast {
-    overflow: visible,
+    overflow: visible;
 }
 
 .toast-capper {
