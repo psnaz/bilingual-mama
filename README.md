@@ -111,7 +111,7 @@ Error pages (404 and 500) are available to the user provided something goes wron
 
 ### CRUD Functionality
 
-Full CRUD funtionality is available to the admin/ blogger/ site owner to be able to draft, save, publish, update and delete posts.
+Full CRUD funtionality is available to the user to be able to submit, update and delete comments and like blog posts.
 
 ### Query form 
 Submitted contact form information is available to the admin/blogger in the admin panel under Queries.
