@@ -14,6 +14,9 @@ from .forms import QueryForm
 
 
 def index(request):
+    """
+    Renders the success page after submitting the query/ contact form
+    """
     template = 'queries/query.html'
 
     query_form = QueryForm()
@@ -26,6 +29,9 @@ def index(request):
 
 
 def query_form(request):
+    """
+    Renders the contact page
+    """
     form = QueryForm(request.POST)
     if form.is_valid():
         form.save()

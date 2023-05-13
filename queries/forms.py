@@ -12,6 +12,9 @@ from .models import Query, STATUS_CHOICES
 
 
 class QueryForm(forms.ModelForm):
+    """
+    Form for query/ contact form
+    """
     required_css_class = 'required'
 
     status = forms.CharField(

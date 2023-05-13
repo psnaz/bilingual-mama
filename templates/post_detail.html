@@ -2,7 +2,8 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
-
+<!-- ALL THE BELOW CODE TAKEN FROM CI DJANGO BLOG WALKTHROUGH PROJECT -->
+<!-- POST DETAIL SECTION -->
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -92,16 +93,14 @@
                         </div>
                     {% endif %}
 
-
                     <br>    
                 {% endif %}                
                 {% endfor %}
-
             </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-                <!--My Code -->
+                <!--My Own Code -->
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
