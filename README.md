@@ -167,7 +167,7 @@ I have created a separate Queries app and inclueded my custom model:
 - FontAwesome used for social media icons: FB, IG, YT
 - Coudinary: for storing images
 - [amiresponsive](http://ami.responsivedesign.is/) was used to create the mockup for Readme
-- Validation services: W3C Markup Validation, W3C CSS Validation, PEP8 Validation
+- Validation services: W3C Markup Validation, W3C CSS Validation, jshint and PEP8 Validation - see the TESTING.md for more details
 
 ## TESTING
 
