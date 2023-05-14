@@ -34,6 +34,8 @@ Other features that are not to be missed is that the users can, if they wish, ge
 - As a Site User/blog reader I can click on a post so that I can read the full text
 - As a Site User/ Blog reader I can register an account so that I can comment and like
 - As a Site User/ Blog reader I can leave comments on a post so that I can be involved in the conversation
+- As a Site User/ Blog reader I can edit my own comments on a post
+- As a Site User/ Blog reader I can delete my comments on a post
 - As a Site User/ Blog reader I can like or unlike a post so that I can interact with the content
 - As a Site User/ Blog reader I can navigate easily through the website so that I can find the information I am looking for
 - As a Site User / Blog reader I can view the About page so that I can find out more about the blogger and the purpose of her blog
@@ -66,7 +68,7 @@ This section is linked to other relevant sections of this blog which allows the 
 The landing page includes an outdoor family photograph of the blogger with her children.
 
 
-### About Section
+### About Page
 
 This section tells an authentic personal story and creates connection with a reader that is being introduced to hands-on bilingual parenting practices that have been tried out by the blogger and other multilingual parents to teach their children their native (minority) language. 
 As this is a blog the main focus is the content shared rather than the images, however, the images are used to entice readers and create know-like-trust factor.
@@ -75,7 +77,7 @@ As this is a blog the main focus is the content shared rather than the images, h
 
 This page contains a contact form that includes contact details fields, status field to find out more about the user, subject line, text area for the message and submit button.
 
-### Registration page
+### Registration Page
 
 This page enables the blog user to register in order to comment and like or unlike blog posts. It contains a form that includes Username and an optional email fields, password and password confirmation field, and a sign-up button.
 
@@ -111,7 +113,7 @@ Error pages (404 and 500) are available to the user provided something goes wron
 
 ### CRUD Functionality
 
-Full CRUD funtionality is available to the user to be able to submit, update and delete comments and like blog posts.
+Full CRUD funtionality is available to a registered/logged-in user to be able to submit, update and delete comments and like blog posts.
 
 ### Query form 
 Submitted contact form information is available to the admin/blogger in the admin panel under Queries.
@@ -127,7 +129,7 @@ Typography was based on the Django blog Walktrough project.
 
 ## Wireframes
 
-Wireframes were created using Canva. 
+Wireframes were created using Canva. !!!!!ATTACH HERE!!!!
 
 ## Database
 
@@ -169,11 +171,11 @@ I have created a separate Queries app and inclueded my custom model:
 
 ## TESTING
 
-I have tested this project manually and completed also some auto testing via the online validation services.
+I have tested this project manually and completed also some auto testing via the online validation services. See the full details on a separate page [HERE.](https://github.com/psnaz/bilingual-mama/blob/main/TESTING.md)
 
 ## DEPLOYMENT
 
-### Deployment to Heroku
+### Deployment to Heroku !!!!!!!!
 
 This site was deployed to Heroku pages by taking the following steps:
 
