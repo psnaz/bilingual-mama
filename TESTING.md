@@ -18,10 +18,11 @@ See the screenshot below for JavaScript code test results run with [JavaScript V
 
 ![javascript-testing.png](./docs/images/javascript-testing.png)
 
-### Python Validator
-See the screenshot below for Python code test results run with [Python Validator.](https://pep8ci.herokuapp.com/)
+### Python Linter
+Majority of errors discovered removed when coding and before running the Python Linter test already in the Gitpod workspace.
+The following pages have been tested (under bilingualmama, bmblog and queries): admin.py, apps.py, forms.py, models.py, urls.py, views.py, models.py and settings.py on [Python Linter.](https://pep8ci.herokuapp.com/)
 
-![python-testing.png](./docs/images/python-testing.png)
+Some errors in settings.py indicated too long lines, but these errors were left without correction due to functionality not being affected in any way, as well as errors in other files mainly indicating white trailing spaces or missing white spaces around operators, keywords etc. 
 
 
 ## Lighthouse Test
