@@ -90,13 +90,13 @@
     <!--My own code for enabling the toast functionality --> 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const toastElList = [].slice.call(document.querySelectorAll('.toast')) 
+            const toastElList = [].slice.call(document.querySelectorAll('.toast')); 
             toastElList.map(function (toastEl) {
                 const toast = new bootstrap.Toast(toastEl);
                 toast.show();
                 }
-            )
-        })
+            );
+        });
     </script>
 
     <!-- Footer -->
