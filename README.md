@@ -226,7 +226,6 @@ Go to Heroku and
 2. Click `“NEW”`
 3. Click `“CREATE NEW APP”`
 4. Give your app a name and select the region closest to you (eg. Europe). Click `“CREATE APP”` to confirm
-
 As the database provided by Django is not suitable for a production enviroment, you have to create a new database in ElephantSQL.com and transfer the data from your IDE to your new database. 
 5. Create ElephantSQL account, log in and go to your dashboard.
 6. Click `“CREATE NEW INSTANCE”`
@@ -237,7 +236,6 @@ As the database provided by Django is not suitable for a production enviroment, 
 11. Check if your details are correct and click `“CREATE INSTANCE”`
 12. Return to the ElephantSQL dashboard and click on your database instance name.
 13. In the URL section, click the copy icon to copy your new database URL
-
 Go to your project workspace (eg. Gitpod) and
 14. create `env.py`. Remember to include this file in `.gitignore` file as env.py mustn’t be included in your Github repository.
 15. In your env.py file add the following code: `import os`   
