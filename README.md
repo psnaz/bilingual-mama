@@ -297,3 +297,20 @@ If you are interested how to fork this repository or how to make a local clone, 
 
 -  Mentor’s advice, especially when creating the template and urls for the Query model to render correctly.
 
+### Content
+
+- All content was written by the developer. 
+
+### Media
+
+- All media created by the developer.
+
+
+### Acknowledgements
+
+- My family for their patience and support
+- My Mentors Guido Cecilio and Chris Quinn for their patience and great insights.
+- Tutor support at Code Institute for their support.
+- Code Institute Slack Community for all their advice and support.
+
+------
