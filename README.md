@@ -129,7 +129,18 @@ Typography was based on the Django blog Walktrough project.
 
 ## Wireframes
 
-Wireframes were created using Canva. !!!!!ATTACH HERE!!!!
+Wireframes for both, desktop and mobile were created by using Canva for the following pages:
+- home
+- blog post
+- about page
+- contact page
+- sign-up page
+- login-page
+
+To view the Desktop wireframes click [here.](https://www.canva.com/design/DAFh3pwTsII/TUpyjm_Pd-4lNxAYQ0Q0hw/view?utm_content=DAFh3pwTsII&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
+
+To view the Mobile phone wireframes click [here.](https://www.canva.com/design/DAFjBMzOvqs/23CeIVF6_PfYv3Ziwoc9Og/view?utm_content=DAFjBMzOvqs&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
+
 
 ## Database
 
