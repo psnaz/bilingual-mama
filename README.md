@@ -198,7 +198,10 @@ The following steps had to be taken to create the Django app:
 12. Migrate your changes: `python3 manage.py migrate`
 13. Test by running your server locally: `python3 manage.py runserver`
 14. Create procfile: `python3 run.py > Procfile`
-15. Push your changes to Github: `git add .` | `git commit -m “Commit message here”` | `git push`
+15. Push your changes to Github: 
+    `git add .`
+    `git commit -m “Commit message here”`
+    `git push`
 
 Once this is done, you can start deployment to Heroku
 
