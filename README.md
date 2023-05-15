@@ -254,14 +254,11 @@ Go to your project workspace (eg. Gitpod) and
  `DATABASES = {‘default’: dj_database_url.parse(os.environ.get(“DATABASE_URL”))}`
 23. Save your settings.py. Your app will now be connected to your remote database hosted on ElephantSQL
 24. Migrate these changes: `python3 manage.py migrate`
-
 Once migrated go over to your ElephantSQL account and
 25. select your database instance and select the `“BROWSER”` on the left.
 26. Click `“TABLE QUERIES”` to see a dropdown list and your database structure. SQL Query list must have populated from your Django migrations.
-
 Head back to your Gitpod workspace and
 27. Add, commit and push your project to GitHub again. Your Gitpod workspace is now connected to your ElephantSQL database.
-
 Now you have to connect your new ElephantSQL database to Heroku, so head back to your Heroku dashboard and
 28. Click on the Settings tab
 29. Set the following config vars: 
@@ -271,10 +268,8 @@ Now you have to connect your new ElephantSQL database to Heroku, so head back to
 `PORT` with a value of 8000, also
 `DEBUG` and add True as a value, 
 `DISABLE_COLLECTSTATIC` and add 1 as a value.
-
 In the Gitpod workspace update your settings.py:
 30. Set DEBUG to True
-
 In Heroku account 
 31. click the `Deploy tab` and as deployment method select `Github` and click the `connect to Github`
 32. Search for your repository name, once found, `connect`.
